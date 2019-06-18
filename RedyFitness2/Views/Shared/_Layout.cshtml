@@ -13,14 +13,27 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                    <li>@Html.ActionLink("About", "About", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <li>
+                        <img src="~/Content/icons/home.png" width="20" height="20" />&ensp;
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>&ensp;&ensp;&ensp;
+                    <li>
+                        <img src="~/Content/icons/history.png" height="20" width="20" />&ensp;
+                        @Html.ActionLink("History", "History", "Home")
+                    </li>&ensp;&ensp;&ensp;
+                    <li>
+                        <img src="~/Content/icons/dumbbell.png" width="20" height="20" />&ensp;
+                        @Html.ActionLink("Workout", "Workout", "Home")
+                    </li>&ensp;&ensp;&ensp;
+                    <li>
+                        <img src="~/Content/icons/userpro2.png" width="20" height="20" />&ensp;
+                        @Html.ActionLink("My Profile", "myProfile", "Home")
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
-        
-       </nav>
+
+    </nav>
         <div class="container body-content">
             @RenderBody()
             <hr />

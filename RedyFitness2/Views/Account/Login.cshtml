@@ -14,8 +14,8 @@
                 <div class="form-group">
                     <div class="col-md-3">
                         <h4>User Name &nbsp; <img src="~/Content/Icons/user.png" width="20" height="20" /></h4>
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <center>
@@ -29,7 +29,7 @@
                 </center>
                 <div class="form-group">
                     <input type="submit" value="Log in" class="btn btn-primary" />
-                    <input type="submit" value="Forgot Account" class="btn btn-primary" /> 
+                    <button onclick="location.href='@Url.Action("ForgotPassword", "Account")';return false;">Forgot Password</button>                   
                 </div>
                 <p>
                     @Html.ActionLink("Register as a new user", "Register")
