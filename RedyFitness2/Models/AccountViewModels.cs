@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RedyFitness2.Models
@@ -83,6 +84,17 @@ namespace RedyFitness2.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        [Required]
+        [DataType(DataType.Date, ErrorMessage = "Please enter a valid date")]
+        [Display(Name = "Date of Birth")]
+        public DateTime DateofBirth { get; set; }
     }
 
     public class ResetPasswordViewModel
