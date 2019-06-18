@@ -6,46 +6,26 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
 
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item active">
-                        &ensp;&ensp;
-                        <a class="nav-item" href="~/Home/Index">Home <br />&ensp;&ensp;&ensp;<img src="~/Content/Icons/home.png" width="20" height="20" /></a>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-item" href="~/Home/History">History <br />&ensp;&ensp;<img src="~/Content/Icons/history.png" width="20" height="20" /></a>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;
-                    </li>
-                    <li class="nav-item active">
-                        <a href="~/Home/Workout">Workout <br />&ensp;&ensp;&ensp;<img src="~/Content/Icons/dumbbell.png" width="20" height="20" /> </a>
-                        &ensp;&ensp;&ensp;&ensp;&ensp;
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-item" href="~/Home/myProfile">My Profile<br />&ensp;&ensp;&ensp;<img src="~/Content/Icons/userpro2.png" width="20" height="20" />   </a>
-                    </li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <li>@Html.ActionLink("About", "About", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
                 </ul>
-             </ul>
-        </div>
-                <a class=" my-2">
-                    <a href="~/Account/Register">New User<br />&ensp;&ensp;<img src="~/Content/Icons/add-group.png" width="20" height="20" /></a>
-                    &ensp;&ensp;&ensp;&ensp;
-                </a>
-                <a class="my-2">
-                    <a href="~/Account/Login">Login<br /> <img src="~/Content/Icons/enter (2).png" width="20" height="20" /></a> &nbsp;
-                </a>
-</nav>
-
+                @Html.Partial("_LoginPartial")
+            </div>
+        
+       </nav>
         <div class="container body-content">
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Redy Fitness Inc.</p>
+                <p>&copy; @DateTime.Now.Year - Redy Fitness inc. </p>
                 @Html.ActionLink("Contact", "Contact", "Home")
             </footer>
         </div>
