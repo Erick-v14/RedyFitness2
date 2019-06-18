@@ -13,16 +13,23 @@ namespace RedyFitness2.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult myProfile()
         {
-            ViewBag.Message = "Your application description page.";
-
+            return View();
+        }
+       
+        public ActionResult History()
+        {
             return View();
         }
 
+        public ActionResult Workout()
+        {
+            return View();
+        }
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Erick Valle";
 
             return View();
         }
