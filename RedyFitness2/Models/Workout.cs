@@ -31,11 +31,16 @@ namespace RedyFitness2.Models
         public double maxWeight { get; set; }
 
         [Required]
-        [Display(Name = "Exercises")]
+        [Display(Name = "Exercise")]
         public string Name { get; set; }
 
-        public DateTime? Date { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime.Today Date {  set; }
 
         public string Notes { get; set; }
+
+
+
+       
     }
 }
