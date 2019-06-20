@@ -29,5 +29,7 @@ namespace RedyFitness2.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<RedyFitness2.Models.WorkoutModel> WorkoutModels { get; set; }
     }
 }

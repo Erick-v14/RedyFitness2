@@ -23,7 +23,7 @@
                     </li>&ensp;&ensp;&ensp;
                     <li>
                         <img src="~/Content/icons/dumbbell.png" width="20" height="20" />&ensp;
-                        @Html.ActionLink("Workout", "Workout", "Home")
+                        @Html.ActionLink("Workout", "Create", "WorkoutModels")
                     </li>&ensp;&ensp;&ensp;
                     <li>
                         <img src="~/Content/icons/userpro2.png" width="20" height="20" />&ensp;
@@ -37,7 +37,7 @@
         <div class="container body-content">
             @RenderBody()
             <hr />
-            <footer>
+            <footer class="fixed-bottom" style="text-align: center;">
                 <p>&copy; @DateTime.Now.Year - Redy Fitness inc. </p>
                 @Html.ActionLink("Contact", "Contact", "Home")
             </footer>
