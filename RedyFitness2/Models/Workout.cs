@@ -35,7 +35,7 @@ namespace RedyFitness2.Models
         public string Name { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime.Today Date {  set; }
+        public DateTime? Date { get; set; }
 
         public string Notes { get; set; }
 
